@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.model.Flight;
+import com.example.demo.Flight;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.model.Ticket;
+import com.example.demo.Ticket;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public class TicketService {
     }
 
     public Ticket retrieveTicketById(String ticketId) {
-        return ticketList.stream().filter(ticket -> ticket.getTicketId().equals(ticketId)).findFirst().orElse(null);
+        return ticketList.stream().filter(ticket -> ticket.retrieveTicketById().equals(ticketId)).findFirst().orElse(null);
     }
 
     public Ticket processTicketBooking(Ticket ticket) {
@@ -25,7 +25,7 @@ public class TicketService {
     }
 
     public boolean deleteTicket(String ticketId) {
-        Optional<Ticket> ticket = ticketList.stream().filter(t -> t.getTicketId().equals(ticketId)).findFirst();
+        Optional<Ticket> ticket = ticketList.stream().filter(t -> t.retrieveTicketById().equals(ticketId)).findFirst();
         ticket.ifPresent(t -> t.setCancelled(true));
         return ticket.isPresent();
     }

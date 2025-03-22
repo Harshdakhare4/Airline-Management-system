@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.model.Flight;
+import com.example.demo.Flight;
 import com.example.demo.service.FlightService;
 import org.springframework.web.bind.annotation.*;
 

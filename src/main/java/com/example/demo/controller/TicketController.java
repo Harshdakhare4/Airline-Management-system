@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.model.Ticket;
+import com.example.demo.Ticket;
 import com.example.demo.service.TicketService;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +21,7 @@ public class TicketController {
     }
 
     @GetMapping("/{ticketId}")
-    public Ticket fetchTicketById(@PathVariable String ticketId) {
+    public Ticket retrieveTicketById(@PathVariable String ticketId) {
         return ticketService.retrieveTicketById(ticketId);
     }
 

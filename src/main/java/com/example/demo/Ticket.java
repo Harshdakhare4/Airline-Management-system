@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.demo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,4 +13,8 @@ public class Ticket {
     private String passengerName;
     private String email;
     private boolean isCancelled;
+
+    public Object retrieveTicketById() {
+        return id;
+    }
 }
